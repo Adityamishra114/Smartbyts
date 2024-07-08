@@ -50,21 +50,21 @@ const NavigationBar = () => {
                 Home
               </NavLink>
               <NavLink
-                href="#about"
+                to="/#about"
                 onClick={() => setMenu("about")}
                 className={menu === "about" ? "active" : ""}
               >
                 About
               </NavLink>
               <NavLink
-                href="#services"
+                to="/#services"
                 onClick={() => setMenu("services")}
                 className={menu === "services" ? "active" : ""}
               >
                 Services
               </NavLink>
               <NavLink
-                href="#contact"
+                to="/#contact"
                 onClick={() => setMenu("contact")}
                 className={menu === "contact" ? "active" : ""}
               >

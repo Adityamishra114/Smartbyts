@@ -1,5 +1,5 @@
 import React from "react";
-
+import itSupport from "../images/techsupport.png";
 const ServicesSection = () => {
   return (
     <section
@@ -15,56 +15,18 @@ const ServicesSection = () => {
             </h5>
           </div>
         </div>
-        <div className="flex flex-wrap gap-5 -mx-4">
-          <div class="book">
-            <p className="text-sm">
-              Reliable and efficient IT support to keep your business operations
-              running smoothly.
-            </p>
-            <div class="cover">
-              <p>IT Support</p>
-            </div>
-          </div>
-          <div class="book">
-            <p>Hello</p>
-            <div class="cover">
-              <p>Hover Me</p>
-            </div>
-          </div>
-          <div class="book">
-            <p>Hello</p>
-            <div class="cover">
-              <p>Hover Me</p>
-            </div>
-          </div>
-          <div class="book">
-            <p>Hello</p>
-            <div class="cover">
-              <p>Hover Me</p>
-            </div>
-          </div>
-        </div>
-
-        {/* <div className="flex flex-wrap -mx-4">
+        <div className="flex flex-wrap -mx-4">
           <div className="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
             <a
               href="#"
               className="single-services-box block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300"
             >
               <div className="services-img">
-                <img
-                  src="assets/img/services/services-1.png"
-                  alt="Service Images"
-                  className="w-full"
-                />
+                <img src={itSupport} alt="Service Images" className="w-full" />
               </div>
-              <h4 className="text-xl lg:text-2xl md:text-xl sm:text-lg font-semibold text-gray-900 py-4 text-center">
+              {/* <h4 className="text-xl lg:text-2xl md:text-xl sm:text-lg font-semibold text-gray-900 py-4 text-center">
                 IT Support:
-              </h4>
-              <p className="text-xl lg:text-2xl md:text-xl sm:text-lg font-semibold text-gray-900 py-4 text-center">
-                Reliable and efficient IT support to keep your business
-                operations running smoothly.
-              </p>
+              </h4> */}
             </a>
           </div>
           <div className="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
@@ -152,7 +114,7 @@ const ServicesSection = () => {
               </h3>
             </a>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
