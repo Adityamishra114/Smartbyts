@@ -38,7 +38,7 @@ code {
   width: 100%;
   height: auto;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.2);
+  background: #05bbd5
 }
 .header-navber-area .nav-top-bar {
   /* background: rgba(0, 0, 0, 0.2); */
