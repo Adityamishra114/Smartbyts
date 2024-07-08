@@ -2,7 +2,7 @@ import React from "react";
 
 const HomeSection = () => {
   return (
-    <section id="home" className="home-area hero-equal-height section-padding">
+    <section id="home" className="home-area mt-10 hero-equal-height section-padding">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-8 offset-lg-2 col-md-12">
