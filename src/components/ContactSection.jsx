@@ -2,40 +2,40 @@ import React, { useState } from "react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+    const scriptURL = process.env.YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL;
 
     try {
       const response = await fetch(scriptURL, {
-        method: 'POST',
-        mode: 'no-cors',
+        method: "POST",
+        mode: "no-cors",
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: new URLSearchParams(formData)
+        body: new URLSearchParams(formData),
       });
       if (response.ok) {
-        alert('Message sent successfully!');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        alert('Something went wrong. Please try again.');
+        alert("Something went wrong. Please try again.");
       }
     } catch (error) {
-      alert('Something went wrong. Please try again.');
+      alert("Something went wrong. Please try again.");
     }
   };
 
@@ -68,13 +68,21 @@ const ContactSection = () => {
                 <p className="text-gray-700">teamsmartbyts@gmail.com</p>
               </div>
               <div className="contact-details mt-4">
-                <h6 className="text-lg font-semibold text-gray-900">Address:</h6>
-                <p className="text-gray-700">Beechwood Avenue - NY 55311, New York</p>
+                <h6 className="text-lg font-semibold text-gray-900">
+                  Address:
+                </h6>
+                <p className="text-gray-700">
+                  Beechwood Avenue - NY 55311, New York
+                </p>
               </div>
             </div>
           </div>
           <div className="w-full lg:w-1/2 px-4 mb-8">
-            <form id="contact-form" onSubmit={handleSubmit} className="contact-form">
+            <form
+              id="contact-form"
+              onSubmit={handleSubmit}
+              className="contact-form"
+            >
               <div className="controls">
                 <div className="flex flex-wrap -mx-2">
                   <div className="w-full lg:w-1/2 px-2 mb-4">

@@ -12,7 +12,7 @@ import NavigationBar from "./NavigationBar";
 const Header = () => {
   return (
     <header className="header-navber-area ">
-      <div className="nav-top-bar topbar text-black py-2 bg-primary">
+      <div className="nav-top-bar topbar text-black py-2 ">
         <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center pt-1  justify-between">
             <div className="w-full md:w-1/2 flex flex-col md:flex-row justify-between  md:mb-0">

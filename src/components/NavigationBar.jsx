@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import logoLight from "../images/smart1.png";
 import logoDark from "../images/Smartbyts1.png";
 
 const NavigationBar = () => {
-  const [menu, setMenu] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -27,7 +26,7 @@ const NavigationBar = () => {
   }, []);
 
   useEffect(() => {
-    const hash = location.hash.replace("#", "");
+    const hash = location.hash.replace("/", "");
     if (hash) {
       scroll.scrollTo(hash);
     }
@@ -48,7 +47,6 @@ const NavigationBar = () => {
           <div className="flex-shrink-0">
             <Link to="/">
               <img
-                onClick={() => setMenu("home")}
                 className="h-24 mt-4"
                 src={isScrolled ? logoDark : logoLight}
                 alt="Logo"
@@ -57,42 +55,43 @@ const NavigationBar = () => {
           </div>
           <div className="hidden sm:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                to="/#home"
-                onClick={() => setMenu("home")}
+              <NavLink
+                to="/"
+                exact
+                activeClassName="text-gray-900"
                 className={`${
-                  menu === "home" ? "text-gray-700" : "text-black"
+                  isScrolled ? "text-gray-700" : "text-black"
                 } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 Home
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/#about"
-                onClick={() => setMenu("about")}
+                activeClassName="text-gray-900"
                 className={`${
-                  menu === "about" ? "text-gray-700" : "text-black"
+                  isScrolled ? "text-gray-700" : "text-black"
                 } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 About
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/#services"
-                onClick={() => setMenu("services")}
+                activeClassName="text-gray-900"
                 className={`${
-                  menu === "services" ? "text-gray-700" : "text-black"
+                  isScrolled ? "text-gray-700" : "text-black"
                 } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 Services
-              </Link>
-              <Link
-                to="/#contact"
-                onClick={() => setMenu("contact")}
+              </NavLink>
+              <NavLink
+                to="#contact"
+                activeClassName="text-gray-900"
                 className={`${
-                  menu === "contact" ? "text-gray-700" : "text-black"
+                  isScrolled ? "text-gray-700" : "text-black"
                 } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 Contact
-              </Link>
+              </NavLink>
             </div>
           </div>
           {/* Mobile menu button */}
@@ -127,54 +126,47 @@ const NavigationBar = () => {
         {isMobileMenuOpen && (
           <div className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link
-                to="/#home"
+              <NavLink
+                to="/"
+                exact
+                activeClassName="text-gray-900"
                 onClick={() => {
-                  setMenu("home");
                   toggleMobileMenu();
                 }}
-                className={`${
-                  menu === "home" ? "text-gray-700" : "text-black"
-                } block px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
+                className=" hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 Home
-              </Link>
-              <Link
-                to="/#about"
+              </NavLink>
+              <NavLink
+                to="/about"
+                activeClassName="text-gray-900"
                 onClick={() => {
-                  setMenu("about");
                   toggleMobileMenu();
                 }}
-                className={`${
-                  menu === "about" ? "text-gray-700" : "text-black"
-                } block px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
+                className=" hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 About
-              </Link>
-              <Link
-                to="/#services"
+              </NavLink>
+              <NavLink
+                to="/services"
+                activeClassName="text-gray-900"
                 onClick={() => {
-                  setMenu("services");
                   toggleMobileMenu();
                 }}
-                className={`${
-                  menu === "services" ? "text-gray-700" : "text-black"
-                } block px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
+                className=" hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 Services
-              </Link>
-              <Link
-                to="/#contact"
+              </NavLink>
+              <NavLink
+                to="/contact"
+                activeClassName="text-gray-900"
                 onClick={() => {
-                  setMenu("contact");
                   toggleMobileMenu();
                 }}
-                className={`${
-                  menu === "contact" ? "text-gray-700" : "text-black"
-                } block px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
+                className=" hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 Contact
-              </Link>
+              </NavLink>
             </div>
           </div>
         )}

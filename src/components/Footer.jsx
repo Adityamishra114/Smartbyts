@@ -80,11 +80,11 @@ const Footer = () => {
             <div className="footer-box-item">
               <div className="footer-content">
                 <h3 className="text-xl font-bold mb-4">Useful Links</h3>
-                <ul className="footer-link">
+                <ul className="footer-link -ml-8">
                   <li>
                     <a
                       href="#"
-                      className="text-gray-300  no-underline hover:text-white"
+                      className="text-gray-300   no-underline hover:text-white"
                     >
                       About Us
                     </a>

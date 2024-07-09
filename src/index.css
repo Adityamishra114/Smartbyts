@@ -23,6 +23,9 @@ code {
 .byts {
   color: #fd9805;
 }
+.topbar {
+  background-color: #05bbd5;
+}
 /* ADVERTISERS SERVICE CARD */
 body {
   font-family: "Roboto", sans-serif !important;
