@@ -11,7 +11,7 @@ const HomeSection = () => {
           <div className="col-lg-8 offset-lg-2 col-md-12">
             <div className="home-content z-index position-relative">
               <h2 className="text-7xl">
-                <span className="text-#24a7cc smart">Smart</span>{" "}
+                <span className="text-#24a7cc smart">Smart</span>
                 <span className="text-#f28926 byts">Byts</span>: Your One Stop
                 IT Solution
               </h2>

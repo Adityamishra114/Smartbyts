@@ -1,21 +1,21 @@
 import React from "react";
-import AboutUs from "./components/AboutUs.jsx";
+import { Route, Routes } from "react-router-dom";
+
 import Header from "./components/Header.jsx";
-import HomeSection from "./components/HomeSection.jsx";
-import ServicesSection from "./components/ServicesSection.jsx";
-import ContactSection from "./components/ContactSection.jsx";
+
 import Footer from "./components/Footer.jsx";
+import Home from "./components/Home.jsx";
 
 const App = () => {
   return (
     <>
       <div className="app">
         <Header />
-        <HomeSection />
-        <AboutUs />
-        <ServicesSection />
-        <ContactSection />
-        <Footer/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+
+        <Footer />
       </div>
     </>
   );

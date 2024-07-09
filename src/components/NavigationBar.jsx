@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import logoLight from "../images/smart1.png";
 import logoDark from "../images/Smartbyts1.png";
@@ -26,7 +26,7 @@ const NavigationBar = () => {
   }, []);
 
   useEffect(() => {
-    const hash = location.hash.replace("/", "");
+    const hash = location.hash.replace("/#", "");
     if (hash) {
       scroll.scrollTo(hash);
     }
@@ -55,43 +55,54 @@ const NavigationBar = () => {
           </div>
           <div className="hidden sm:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <NavLink
-                to="/"
-                exact
-                activeClassName="text-gray-900"
+              <ScrollLink
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 className={`${
                   isScrolled ? "text-gray-700" : "text-black"
                 } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 Home
-              </NavLink>
-              <NavLink
-                to="/#about"
-                activeClassName="text-gray-900"
+              </ScrollLink>
+              <ScrollLink
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 className={`${
                   isScrolled ? "text-gray-700" : "text-black"
                 } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 About
-              </NavLink>
-              <NavLink
-                to="/#services"
-                activeClassName="text-gray-900"
+              </ScrollLink>
+              <ScrollLink
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 className={`${
                   isScrolled ? "text-gray-700" : "text-black"
                 } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 Services
-              </NavLink>
-              <NavLink
-                to="#contact"
-                activeClassName="text-gray-900"
+              </ScrollLink>
+              <ScrollLink
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 className={`${
                   isScrolled ? "text-gray-700" : "text-black"
                 } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 Contact
-              </NavLink>
+              </ScrollLink>
             </div>
           </div>
           {/* Mobile menu button */}
@@ -126,47 +137,58 @@ const NavigationBar = () => {
         {isMobileMenuOpen && (
           <div className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <NavLink
-                to="/"
-                exact
-                activeClassName="text-gray-900"
+              <ScrollLink
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 onClick={() => {
                   toggleMobileMenu();
                 }}
                 className=" hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 Home
-              </NavLink>
-              <NavLink
-                to="/about"
-                activeClassName="text-gray-900"
+              </ScrollLink>
+              <ScrollLink
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 onClick={() => {
                   toggleMobileMenu();
                 }}
                 className=" hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 About
-              </NavLink>
-              <NavLink
-                to="/services"
-                activeClassName="text-gray-900"
+              </ScrollLink>
+              <ScrollLink
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 onClick={() => {
                   toggleMobileMenu();
                 }}
                 className=" hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 Services
-              </NavLink>
-              <NavLink
-                to="/contact"
-                activeClassName="text-gray-900"
+              </ScrollLink>
+              <ScrollLink
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 onClick={() => {
                   toggleMobileMenu();
                 }}
                 className=" hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 Contact
-              </NavLink>
+              </ScrollLink>
             </div>
           </div>
         )}
