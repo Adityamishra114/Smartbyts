@@ -1,5 +1,14 @@
 import React from "react";
-import itSupport from "../images/techsupport.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLaptop,
+  faVideo,
+  faCode,
+  faHeadset,
+  faPalette,
+  faChartLine,
+} from "@fortawesome/free-solid-svg-icons";
+
 const ServicesSection = () => {
   return (
     <section id="advertisers" class="advertisers-service-sec pt-5 pb-5">
@@ -16,72 +25,72 @@ const ServicesSection = () => {
           <div class="col">
             <div class="service-card">
               <div class="icon-wrapper">
-                <i class="fa-solid fa-chart-line"></i>
+                <FontAwesomeIcon icon={faHeadset}  />
               </div>
-              <h3>Tracking Lead</h3>
+              <h3>IT Support</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Quisquam consequatur necessitatibus eaque.
+                Reliable and efficient IT support to keep your business
+                operations running smoothly.
               </p>
             </div>
           </div>
           <div class="col">
             <div class="service-card">
               <div class="icon-wrapper">
-                <i class="fa-solid fa-arrows-down-to-people"></i>
+                <FontAwesomeIcon icon={faPalette} />
               </div>
-              <h3>Advanced Targeting solution</h3>
+              <h3>Website Design & Development</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Quisquam consequatur necessitatibus eaque.
+                Creating visually appealing and user-friendly websites that
+                boost your online presence.
               </p>
             </div>
           </div>
           <div class="col">
             <div class="service-card">
               <div class="icon-wrapper">
-                <i class="fa-solid fa-globe"></i>
+                <FontAwesomeIcon icon={faCode}  />
               </div>
-              <h3>Global Reach & Quality Traffic</h3>
+              <h3>Web App Development</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Quisquam consequatur necessitatibus eaque.
+                Developing robust and scalable web applications customized to
+                your business requirements.
               </p>
             </div>
           </div>
           <div class="col">
             <div class="service-card">
               <div class="icon-wrapper">
-                <i class="fa-solid fa-money-check-dollar"></i>
+                <FontAwesomeIcon icon={faChartLine}  />
               </div>
-              <h3>Flexible pricing models</h3>
+              <h3>CRM Software Solutions</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Quisquam consequatur necessitatibus eaque.
+                Implementing effective CRM systems to manage and grow your
+                customer relationships.
               </p>
             </div>
           </div>
           <div class="col">
             <div class="service-card">
               <div class="icon-wrapper">
-                <i class="fa-regular fa-circle-check"></i>
+                <FontAwesomeIcon icon={faLaptop}  />
               </div>
-              <h3>Advanced optimization technologies & methodologies</h3>
+              <h3>Sale of IT Equipment</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Quisquam consequatur necessitatibus eaque.
+                Supplying high-quality IT equipment to meet your technological
+                needs.
               </p>
             </div>
           </div>
           <div class="col">
             <div class="service-card">
               <div class="icon-wrapper">
-                <i class="fa-solid fa-people-group"></i>
+                <FontAwesomeIcon icon={faVideo}  />
               </div>
-              <h3>Dedicated account management team</h3>
+              <h3>CCTV </h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Quisquam consequatur necessitatibus eaque.
+                Providing advanced CCTV solutions to ensure the security and
+                safety of your premises.
               </p>
             </div>
           </div>

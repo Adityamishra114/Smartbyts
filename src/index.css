@@ -132,7 +132,7 @@ body {
 
 .service-card .icon-wrapper {
   background-color: #ffffff;
-  color: rgb(255, 23, 131);
+  color: #fd9805;
 }
 
 .advertisers-service-sec .service-card:hover .icon-wrapper {
