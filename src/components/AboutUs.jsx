@@ -2,7 +2,7 @@ import React from "react";
 import aboutLogo from "../images/Office1.jpg";
 const AboutUs = () => {
   return (
-    <section id="about" className="about-area bg-gray-100 section-padding">
+    <section id="about" className="about-area mt-15 bg-gray-100 section-padding">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap  items-center">
           <div className="lg:w-1/2 md:w-full sm:w-full ">

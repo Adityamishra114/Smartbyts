@@ -15,7 +15,7 @@ const HomeSection = () => {
                 <span className="text-#f28926 byts">Byts:</span>Your One Stop
                 IT Solution
               </h2>
-              <p className="text-xl mt-4 mb-5">
+              <p className="text-xl mt-4 ">
                 Welcome to SmartByts, your premier provider of innovative
                 technology solutions in the field of Information Technology. Our
                 mission is to empower businesses by delivering comprehensive IT

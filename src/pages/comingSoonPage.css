@@ -1,0 +1,45 @@
+img{
+    background:white;
+     width: 50%;
+ }
+ .bgimg {
+   background-image: url('https://assets.justinmind.com/wp-content/uploads/2020/02/website-background-design-guide.png');
+   height: 100%;
+   background-position: center;
+   background-size: cover;
+   position: relative;
+   color: white;
+   font-family: "Courier New", Courier, monospace;
+   font-size: 25px;
+ }
+ h3{
+   colour:white;
+ }
+ 
+ .topleft {
+   position: absolute;
+   top: 0;
+   left: 16px;
+ }
+ 
+ .bottomleft {
+   position: absolute;
+   bottom: 0;
+   left: 16px;
+ }
+ 
+ .middle {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+ }
+ 
+ hr {
+   margin: auto;
+   width: 40%;
+ }
+ p a{
+   color:white;
+ }
