@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import contact from "../images/contact.jpg";
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -52,21 +52,7 @@ const ContactSection = () => {
         </div>
         <div className="flex flex-wrap">
           <div className="w-full lg:w-1/2 px-4 mb-8">
-            <div className="contact-information">
-              <div className="contact-info-title mb-6">
-                <h3 className="text-2xl lg:text-3xl md:text-2xl sm:text-xl font-semibold text-gray-900">
-                  Contact Info
-                </h3>
-              </div>
-              <div className="contact-details">
-                <h6 className="text-lg font-semibold text-gray-900">Phone:</h6>
-                <p className="text-gray-700">+91-7004289924</p>
-              </div>
-              <div className="contact-details mt-4">
-                <h6 className="text-lg font-semibold text-gray-900">Email:</h6>
-                <p className="text-gray-700">teamsmartbyts@gmail.com</p>
-              </div>
-            </div>
+            <img src={contact} alt="" className="w-full " />
           </div>
           <div className="w-full lg:w-1/2 px-4 mb-8">
             <form
