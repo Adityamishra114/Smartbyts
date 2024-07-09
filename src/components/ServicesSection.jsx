@@ -75,10 +75,9 @@ const ServicesSection = () => {
               <div class="icon-wrapper">
                 <FontAwesomeIcon icon={faLaptop} />
               </div>
-              <h3>Sale of IT Equipment</h3>
+              <h3>IT Infrastructure and Consulting Services</h3>
               <p>
-                Supplying high-quality IT equipment to meet your technological
-                needs.
+              Expert IT infrastructure solutions and consulting for reliable, scalable, and secure business growth.
               </p>
             </div>
           </div>
@@ -87,7 +86,7 @@ const ServicesSection = () => {
               <div class="icon-wrapper">
                 <FontAwesomeIcon icon={faVideo} />
               </div>
-              <h3>CCTV </h3>
+              <h3>CCTV Camera and Security Solutions</h3>
               <p>
                 Providing advanced CCTV solutions to ensure the security and
                 safety of your premises.
