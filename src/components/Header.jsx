@@ -12,39 +12,41 @@ import NavigationBar from "./NavigationBar";
 const Header = () => {
   return (
     <header className="header-navber-area ">
-      <div className="nav-top-bar text-black py-2 ">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-between">
-            <div className="w-full md:w-1/2 flex flex-wrap justify-between">
-              <div className="call-to-action  ">
-                <p>
+      <div className="nav-top-bar topbar text-black py-2 bg-primary">
+        <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center pt-1  justify-between">
+            <div className="w-full md:w-1/2 flex flex-col md:flex-row justify-between  md:mb-0">
+              <div className="call-to-action flex-wrap gap-2 items-center flex">
+                <p className="flex items-center">
                   <FontAwesomeIcon
                     icon={faEnvelope}
-                    className="text-xl text-white"
+                    className="text-lg  text-white"
                   />
-                  <span className="text-xl ml-1 text-white ">Email:</span>
-
+                  {/* <span className="text-lg ml-1 text-white">Email:</span> */}
                   <a
                     href="mailto:teamsmartbyts@gmail.com"
-                    className="text-xl text-white no-underline"
+                    className="text-lg text-white no-underline ml-1"
                   >
                     teamsmartbyts@gmail.com
                   </a>
                 </p>
-                <p>
+                <p className="flex items-center ">
                   <FontAwesomeIcon
                     icon={faPhone}
-                    className="text-xl text-white"
-                  />{" "}
-                  <span className="text-xl ml-1 text-white">Phone:</span>
-                  <a href="tel:+50530722233" className="text-xl no-underline text-white">
+                    className="text-lg md:-mt-0 -mt-4 text-white"
+                  />
+                  {/* <span className="text-lg ml-1 -mt-4 text-white">Phone:</span> */}
+                  <a
+                    href="tel:+50530722233"
+                    className="text-lg no-underline md:-mt-0 -mt-4 text-white ml-1"
+                  >
                     +505 307 222-33
                   </a>
                 </p>
               </div>
             </div>
-            <div className="w-full md:w-1/2 text-right">
-              <ul className="top-social  flex gap-3 font-normal">
+            <div className="w-full  md:w-1/2 text-right">
+              <ul className="top-social flex  gap-3 -mt-4 md:-mt-0 -ml-8 justify-start md:justify-end font-normal">
                 <li>
                   <a href="#">
                     <FontAwesomeIcon
@@ -81,8 +83,8 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <NavigationBar />
       </div>
+        <NavigationBar />
     </header>
   );
 };

@@ -42,7 +42,7 @@ const ContactSection = () => {
           <div className="w-full lg:w-1/2 px-4 mb-8">
             <form
               id="contact-form"
-              action="mail.php"
+              action=""
               method="POST"
               className="contact-form"
             >

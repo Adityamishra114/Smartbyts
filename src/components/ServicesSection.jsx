@@ -2,12 +2,9 @@ import React from "react";
 import itSupport from "../images/techsupport.png";
 const ServicesSection = () => {
   return (
-    <section
-      id="services"
-      className="services-area bg-gray-100 section-padding"
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-10">
+    <section id="advertisers" class="advertisers-service-sec pt-5 pb-5">
+      <div class="container">
+        <div class="row">
           <div className="section-title text-center">
             <h2 className="text-gray-600 text-center">Our Services</h2>
             <h5 className="text-3xl lg:text-4xl md:text-3xl sm:text-2xl font-bold text-gray-900">
@@ -15,104 +12,78 @@ const ServicesSection = () => {
             </h5>
           </div>
         </div>
-        <div className="flex flex-wrap -mx-4">
-          <div className="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
-            <a
-              href="#"
-              className="single-services-box block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300"
-            >
-              <div className="services-img">
-                <img src={itSupport} alt="Service Images" className="w-full" />
+        <div class="row mt-5 mt-md-4 row-cols-1 row-cols-sm-1 row-cols-md-3 justify-content-center">
+          <div class="col">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-chart-line"></i>
               </div>
-              {/* <h4 className="text-xl lg:text-2xl md:text-xl sm:text-lg font-semibold text-gray-900 py-4 text-center">
-                IT Support:
-              </h4> */}
-            </a>
+              <h3>Tracking Lead</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam consequatur necessitatibus eaque.
+              </p>
+            </div>
           </div>
-          <div className="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
-            <a
-              href="#"
-              className="single-services-box block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300"
-            >
-              <div className="services-img">
-                <img
-                  src="assets/img/services/services-2.png"
-                  alt="Service Images"
-                  className="w-full"
-                />
+          <div class="col">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-arrows-down-to-people"></i>
               </div>
-              <h3 className="text-xl lg:text-2xl md:text-xl sm:text-lg font-semibold text-gray-900 py-4 text-center">
-                Smartphone Repair
-              </h3>
-            </a>
+              <h3>Advanced Targeting solution</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam consequatur necessitatibus eaque.
+              </p>
+            </div>
           </div>
-          <div className="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
-            <a
-              href="#"
-              className="single-services-box block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300"
-            >
-              <div className="services-img">
-                <img
-                  src="assets/img/services/services-3.png"
-                  alt="Service Images"
-                  className="w-full"
-                />
+          <div class="col">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-globe"></i>
               </div>
-              <h3 className="text-xl lg:text-2xl md:text-xl sm:text-lg font-semibold text-gray-900 py-4 text-center">
-                Computer Repair
-              </h3>
-            </a>
+              <h3>Global Reach & Quality Traffic</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam consequatur necessitatibus eaque.
+              </p>
+            </div>
           </div>
-          <div className="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
-            <a
-              href="#"
-              className="single-services-box block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300"
-            >
-              <div className="services-img">
-                <img
-                  src="assets/img/services/services-4.png"
-                  alt="Service Images"
-                  className="w-full"
-                />
+          <div class="col">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-money-check-dollar"></i>
               </div>
-              <h3 className="text-xl lg:text-2xl md:text-xl sm:text-lg font-semibold text-gray-900 py-4 text-center">
-                Tablet Repair
-              </h3>
-            </a>
+              <h3>Flexible pricing models</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam consequatur necessitatibus eaque.
+              </p>
+            </div>
           </div>
-          <div className="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
-            <a
-              href="#"
-              className="single-services-box block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300"
-            >
-              <div className="services-img">
-                <img
-                  src="assets/img/services/services-5.png"
-                  alt="Service Images"
-                  className="w-full"
-                />
+          <div class="col">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fa-regular fa-circle-check"></i>
               </div>
-              <h3 className="text-xl lg:text-2xl md:text-xl sm:text-lg font-semibold text-gray-900 py-4 text-center">
-                Gaming Console
-              </h3>
-            </a>
+              <h3>Advanced optimization technologies & methodologies</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam consequatur necessitatibus eaque.
+              </p>
+            </div>
           </div>
-          <div className="w-full lg:w-1/3 md:w-1/2 px-4 mb-8">
-            <a
-              href="#"
-              className="single-services-box block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300"
-            >
-              <div className="services-img">
-                <img
-                  src="assets/img/services/services-6.png"
-                  alt="Service Images"
-                  className="w-full"
-                />
+          <div class="col">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-people-group"></i>
               </div>
-              <h3 className="text-xl lg:text-2xl md:text-xl sm:text-lg font-semibold text-gray-900 py-4 text-center">
-                Others Services
-              </h3>
-            </a>
+              <h3>Dedicated account management team</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam consequatur necessitatibus eaque.
+              </p>
+            </div>
           </div>
         </div>
       </div>

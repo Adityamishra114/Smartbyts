@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logoLight from "../images/smart1.png";
 import logoDark from "../images/Smartbyts1.png";
 
 const NavigationBar = () => {
   const [menu, setMenu] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -22,14 +24,18 @@ const NavigationBar = () => {
     };
   }, []);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav
-      className={`fixed  w-full z-50 transition duration-300 ${
+      className={`fixed w-full z-50 transition duration-300 ${
         isScrolled ? "bg-white shadow-lg top-0" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-2 sm:px-6 lg:px-8">
-        <div className="flex items-center   justify-between h-32">
+        <div className="flex items-center justify-between h-32">
           <div className="flex-shrink-0">
             <Link to="/">
               <img
@@ -41,32 +47,41 @@ const NavigationBar = () => {
             </Link>
           </div>
           <div className="hidden sm:block">
-            <div className="ml-10 flex items-baseline space-x-4 ">
+            <div className="ml-10 flex items-baseline space-x-4">
               <NavLink
+                exact
                 to="/"
                 onClick={() => setMenu("home")}
-                className={menu === "home" ? "active" : ""}
+                className={`${
+                  menu === "home" ? "text-gray-700" : "text-black"
+                } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold`}
               >
                 Home
               </NavLink>
               <NavLink
                 to="/#about"
                 onClick={() => setMenu("about")}
-                className={menu === "about" ? "active" : ""}
+                className={`${
+                  menu === "about" ? "text-gray-700" : "text-black"
+                } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold`}
               >
                 About
               </NavLink>
               <NavLink
                 to="/#services"
                 onClick={() => setMenu("services")}
-                className={menu === "services" ? "active" : ""}
+                className={`${
+                  menu === "services" ? "text-gray-700" : "text-black"
+                } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold`}
               >
                 Services
               </NavLink>
               <NavLink
                 to="/#contact"
                 onClick={() => setMenu("contact")}
-                className={menu === "contact" ? "active" : ""}
+                className={`${
+                  menu === "contact" ? "text-gray-700" : "text-black"
+                } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold`}
               >
                 Contact
               </NavLink>
@@ -75,8 +90,9 @@ const NavigationBar = () => {
           {/* Mobile menu button */}
           <div className="-mr-2 flex sm:hidden">
             <button
+              onClick={toggleMobileMenu}
               type="button"
-              className={`inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white`}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               {/* Hamburger Icon */}
               <svg
@@ -99,23 +115,65 @@ const NavigationBar = () => {
             </button>
           </div>
         </div>
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="sm:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              <NavLink
+                exact
+                to="/"
+                onClick={() => {
+                  setMenu("home");
+                  toggleMobileMenu();
+                }}
+                className={`${
+                  menu === "home" ? "text-gray-700" : "text-black"
+                } block px-3 py-2 rounded-md text-xl no-underline font-bold`}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/#about"
+                onClick={() => {
+                  setMenu("about");
+                  toggleMobileMenu();
+                }}
+                className={`${
+                  menu === "about" ? "text-gray-700" : "text-black"
+                } block px-3 py-2 rounded-md text-xl no-underline font-bold`}
+              >
+                About
+              </NavLink>
+              <NavLink
+                to="/#services"
+                onClick={() => {
+                  setMenu("services");
+                  toggleMobileMenu();
+                }}
+                className={`${
+                  menu === "services" ? "text-gray-700" : "text-black"
+                } block px-3 py-2 rounded-md text-xl no-underline font-bold`}
+              >
+                Services
+              </NavLink>
+              <NavLink
+                to="/#contact"
+                onClick={() => {
+                  setMenu("contact");
+                  toggleMobileMenu();
+                }}
+                className={`${
+                  menu === "contact" ? "text-gray-700" : "text-black"
+                } block px-3 py-2 rounded-md text-xl no-underline font-bold`}
+              >
+                Contact
+              </NavLink>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
 };
-
-const NavLink = ({ to, isActive, children }) => (
-  <Link
-    to={to}
-    className={`${
-      isActive
-        ?" hover:text-gray-700"
-        : " text-black hover:text-gray-700"
-    } px-3 py-2 rounded-md text-xl no-underline font-bold`}
-    aria-current={isActive ? "page" : undefined}
-  >
-    {children}
-  </Link>
-);
 
 export default NavigationBar;
