@@ -17,28 +17,28 @@ const Header = () => {
           <div className="flex flex-wrap items-center pt-1  justify-between">
             <div className="w-full md:w-1/2 flex flex-col md:flex-row justify-between  md:mb-0">
               <div className="call-to-action flex-wrap gap-2 items-center flex">
-                <p className="flex items-center">
+                <p className="flex items-center contact">
                   <FontAwesomeIcon
                     icon={faEnvelope}
-                    className="text-lg  text-white"
+                    className="text-lg contact  text-white"
                   />
                   {/* <span className="text-lg ml-1 text-white">Email:</span> */}
                   <a
                     href="mailto:teamsmartbyts@gmail.com"
-                    className="text-lg text-white no-underline ml-1"
+                    className="text-lg contact text-white no-underline ml-1"
                   >
                     teamsmartbyts@gmail.com
                   </a>
                 </p>
-                <p className="flex items-center ">
+                <p className="flex items-center phone contact">
                   <FontAwesomeIcon
                     icon={faPhone}
-                    className="text-lg md:-mt-0 -mt-4 text-white"
+                    className="text-lg contact md:-mt-0 -mt-4 text-white"
                   />
                   {/* <span className="text-lg ml-1 -mt-4 text-white">Phone:</span> */}
                   <a
                     href="tel:+917004289924"
-                    className="text-lg no-underline md:-mt-0 -mt-4 text-white ml-1"
+                    className="text-lg contact no-underline md:-mt-0 -mt-4 text-white ml-1"
                   >
                     +91-7004289924
                   </a>
@@ -51,7 +51,7 @@ const Header = () => {
                   <a href="#">
                     <FontAwesomeIcon
                       icon={faFacebook}
-                      className="text-xl text-white"
+                      className="text-xl contact text-white"
                     />
                   </a>
                 </li>
@@ -59,7 +59,7 @@ const Header = () => {
                   <a href="#">
                     <FontAwesomeIcon
                       icon={faTwitter}
-                      className="text-xl text-white"
+                      className="text-xl contact text-white"
                     />
                   </a>
                 </li>
@@ -67,7 +67,7 @@ const Header = () => {
                   <a href="#">
                     <FontAwesomeIcon
                       icon={faInstagram}
-                      className="text-xl text-white"
+                      className="text-xl contact text-white"
                     />
                   </a>
                 </li>
@@ -75,7 +75,7 @@ const Header = () => {
                   <a href="#">
                     <FontAwesomeIcon
                       icon={faYoutube}
-                      className="text-xl text-white"
+                      className="text-xl contact text-white"
                     />
                   </a>
                 </li>

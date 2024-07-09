@@ -126,7 +126,7 @@ const Footer = () => {
                       className="text-lg md:-mt-0 -mt-4  text-white"
                     />
                     <a
-                      href="tel:503777505"
+                      href="tel:+91-7004289924"
                       className="text-gray-300 ml-2 no-underline hover:text-white"
                     >
                       +91-7004289924

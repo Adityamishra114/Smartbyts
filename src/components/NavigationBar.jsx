@@ -42,12 +42,12 @@ const NavigationBar = () => {
         isScrolled ? "bg-white shadow-lg top-0" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-2 sm:px-6 lg:px-8">
+      <div className="container navbar1 mx-auto px-2 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-32">
           <div className="flex-shrink-0">
             <Link to="/">
               <img
-                className="h-24 mt-4"
+                className="h-12  logo md:h-24 md:mt-4 sm:h-12  -mt-10"
                 src={isScrolled ? logoDark : logoLight}
                 alt="Logo"
               />
@@ -185,7 +185,7 @@ const NavigationBar = () => {
                 onClick={() => {
                   toggleMobileMenu();
                 }}
-                className="hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
+                className="hover:text-gray-700 text-black px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 Contact
               </ScrollLink>
