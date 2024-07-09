@@ -26,7 +26,7 @@ const NavigationBar = () => {
   }, []);
 
   useEffect(() => {
-    const hash = location.hash.replace("/#", "");
+    const hash = location.hash.replace("/", "");
     if (hash) {
       scroll.scrollTo(hash);
     }
@@ -146,7 +146,7 @@ const NavigationBar = () => {
                 onClick={() => {
                   toggleMobileMenu();
                 }}
-                className=" hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
+                className="hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 Home
               </ScrollLink>
@@ -159,7 +159,7 @@ const NavigationBar = () => {
                 onClick={() => {
                   toggleMobileMenu();
                 }}
-                className=" hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
+                className="hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 About
               </ScrollLink>
@@ -172,7 +172,7 @@ const NavigationBar = () => {
                 onClick={() => {
                   toggleMobileMenu();
                 }}
-                className=" hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
+                className="hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 Services
               </ScrollLink>
@@ -185,7 +185,7 @@ const NavigationBar = () => {
                 onClick={() => {
                   toggleMobileMenu();
                 }}
-                className=" hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
+                className="hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer"
               >
                 Contact
               </ScrollLink>

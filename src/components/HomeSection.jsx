@@ -6,7 +6,7 @@ const HomeSection = () => {
       id="home"
       className="home-area mt-40 hero-equal-height section-padding"
     >
-      <div className="container">
+      <div className="container mx-auto">
         <div className="row align-items-center">
           <div className="col-lg-8 offset-lg-2 col-md-12">
             <div className="home-content z-index position-relative">

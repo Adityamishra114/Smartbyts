@@ -129,7 +129,7 @@ const Footer = () => {
                       href="tel:503777505"
                       className="text-gray-300 ml-2 no-underline hover:text-white"
                     >
-                      +001 503 777 505
+                      +91-7004289924
                     </a>
                   </li>
                   <li>
