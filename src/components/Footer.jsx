@@ -19,11 +19,10 @@ const Footer = () => {
                 <span className="smart text-3xl font-bold">Smart</span>
                 <span className="byts text-3xl font-bold">Byts</span>
                 <p className="text-gray-300 mt-4 ">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  enim ad minim.
+                  Welcome to SmartByts, your premier provider of innovative
+                  technology solutions in the field of Information Technology.
                 </p>
-                <ul className="footer-social  font-bold  flex space-x-4">
+                <ul className="footer-social -ml-9  font-bold  flex space-x-4">
                   <li>
                     <a href="#">
                       <li>
@@ -85,7 +84,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-300 no-underline hover:text-white"
+                      className="text-gray-300  no-underline hover:text-white"
                     >
                       About Us
                     </a>

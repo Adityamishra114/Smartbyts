@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import logoLight from "../images/smart1.png";
 import logoDark from "../images/Smartbyts1.png";
 
@@ -7,6 +8,7 @@ const NavigationBar = () => {
   const [menu, setMenu] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +25,13 @@ const NavigationBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+    if (hash) {
+      scroll.scrollTo(hash);
+    }
+  }, [location]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -48,43 +57,42 @@ const NavigationBar = () => {
           </div>
           <div className="hidden sm:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <NavLink
-                exact
-                to="/"
+              <Link
+                to="/#home"
                 onClick={() => setMenu("home")}
                 className={`${
                   menu === "home" ? "text-gray-700" : "text-black"
-                } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold`}
+                } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 Home
-              </NavLink>
-              <NavLink
+              </Link>
+              <Link
                 to="/#about"
                 onClick={() => setMenu("about")}
                 className={`${
                   menu === "about" ? "text-gray-700" : "text-black"
-                } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold`}
+                } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 About
-              </NavLink>
-              <NavLink
+              </Link>
+              <Link
                 to="/#services"
                 onClick={() => setMenu("services")}
                 className={`${
                   menu === "services" ? "text-gray-700" : "text-black"
-                } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold`}
+                } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 Services
-              </NavLink>
-              <NavLink
+              </Link>
+              <Link
                 to="/#contact"
                 onClick={() => setMenu("contact")}
                 className={`${
                   menu === "contact" ? "text-gray-700" : "text-black"
-                } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold`}
+                } hover:text-gray-700 px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 Contact
-              </NavLink>
+              </Link>
             </div>
           </div>
           {/* Mobile menu button */}
@@ -119,20 +127,19 @@ const NavigationBar = () => {
         {isMobileMenuOpen && (
           <div className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <NavLink
-                exact
-                to="/"
+              <Link
+                to="/#home"
                 onClick={() => {
                   setMenu("home");
                   toggleMobileMenu();
                 }}
                 className={`${
                   menu === "home" ? "text-gray-700" : "text-black"
-                } block px-3 py-2 rounded-md text-xl no-underline font-bold`}
+                } block px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 Home
-              </NavLink>
-              <NavLink
+              </Link>
+              <Link
                 to="/#about"
                 onClick={() => {
                   setMenu("about");
@@ -140,11 +147,11 @@ const NavigationBar = () => {
                 }}
                 className={`${
                   menu === "about" ? "text-gray-700" : "text-black"
-                } block px-3 py-2 rounded-md text-xl no-underline font-bold`}
+                } block px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 About
-              </NavLink>
-              <NavLink
+              </Link>
+              <Link
                 to="/#services"
                 onClick={() => {
                   setMenu("services");
@@ -152,11 +159,11 @@ const NavigationBar = () => {
                 }}
                 className={`${
                   menu === "services" ? "text-gray-700" : "text-black"
-                } block px-3 py-2 rounded-md text-xl no-underline font-bold`}
+                } block px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 Services
-              </NavLink>
-              <NavLink
+              </Link>
+              <Link
                 to="/#contact"
                 onClick={() => {
                   setMenu("contact");
@@ -164,10 +171,10 @@ const NavigationBar = () => {
                 }}
                 className={`${
                   menu === "contact" ? "text-gray-700" : "text-black"
-                } block px-3 py-2 rounded-md text-xl no-underline font-bold`}
+                } block px-3 py-2 rounded-md text-xl no-underline font-bold cursor-pointer`}
               >
                 Contact
-              </NavLink>
+              </Link>
             </div>
           </div>
         )}

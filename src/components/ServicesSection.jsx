@@ -11,7 +11,7 @@ import {
 
 const ServicesSection = () => {
   return (
-    <section id="advertisers" class="advertisers-service-sec pt-5 pb-5">
+    <section id="services" class="advertisers-service-sec pt-5 pb-5">
       <div class="container">
         <div class="row">
           <div className="section-title text-center">
@@ -25,7 +25,7 @@ const ServicesSection = () => {
           <div class="col">
             <div class="service-card">
               <div class="icon-wrapper">
-                <FontAwesomeIcon icon={faHeadset}  />
+                <FontAwesomeIcon icon={faHeadset} />
               </div>
               <h3>IT Support</h3>
               <p>
@@ -49,7 +49,7 @@ const ServicesSection = () => {
           <div class="col">
             <div class="service-card">
               <div class="icon-wrapper">
-                <FontAwesomeIcon icon={faCode}  />
+                <FontAwesomeIcon icon={faCode} />
               </div>
               <h3>Web App Development</h3>
               <p>
@@ -61,7 +61,7 @@ const ServicesSection = () => {
           <div class="col">
             <div class="service-card">
               <div class="icon-wrapper">
-                <FontAwesomeIcon icon={faChartLine}  />
+                <FontAwesomeIcon icon={faChartLine} />
               </div>
               <h3>CRM Software Solutions</h3>
               <p>
@@ -73,7 +73,7 @@ const ServicesSection = () => {
           <div class="col">
             <div class="service-card">
               <div class="icon-wrapper">
-                <FontAwesomeIcon icon={faLaptop}  />
+                <FontAwesomeIcon icon={faLaptop} />
               </div>
               <h3>Sale of IT Equipment</h3>
               <p>
@@ -85,7 +85,7 @@ const ServicesSection = () => {
           <div class="col">
             <div class="service-card">
               <div class="icon-wrapper">
-                <FontAwesomeIcon icon={faVideo}  />
+                <FontAwesomeIcon icon={faVideo} />
               </div>
               <h3>CCTV </h3>
               <p>
