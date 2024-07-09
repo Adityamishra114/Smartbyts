@@ -5,7 +5,7 @@ const AboutUs = () => {
     <section id="about" className="about-area bg-gray-100 section-padding">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap  items-center">
-          <div className="lg:w-1/2 md:w-full sm:w-full -mt-6">
+          <div className="lg:w-1/2 md:w-full sm:w-full ">
             <div className="about-image-wrapper">
               <img src={aboutLogo} alt="About image" className="w-full -mt-20 " />
             </div>
@@ -23,10 +23,10 @@ const AboutUs = () => {
                   state-of-the-art IT solutions tailored to meet the unique
                   needs of our clients.
                 </p>
-                <h3 className="text-2xl lg:text-3xl md:text-2xl sm:text-xl font-medium text-gray-900 mb-4">
+                <h3 className="text-2xl lg:text-3xl md:text-2xl sm:text-xl font-medium text-gray-900 mb-2">
                   Our Commitment
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
+                <p className="text-gray-700 leading-relaxed mb-4">
                   At SmartByts, your success is our priority. We believe in
                   building lasting relationships with our clients based on
                   trust, transparency, and exceptional service. Our goal is to
