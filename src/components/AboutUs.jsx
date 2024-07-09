@@ -23,7 +23,7 @@ const AboutUs = () => {
                   state-of-the-art IT solutions tailored to meet the unique
                   needs of our clients.
                 </p>
-                <h3 className="text-2xl lg:text-3xl md:text-2xl sm:text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-2xl lg:text-3xl md:text-2xl sm:text-xl font-medium text-gray-900 mb-4">
                   Our Commitment
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-6">

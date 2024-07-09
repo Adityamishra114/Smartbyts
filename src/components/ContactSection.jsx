@@ -61,19 +61,10 @@ const ContactSection = () => {
               <div className="contact-details">
                 <h6 className="text-lg font-semibold text-gray-900">Phone:</h6>
                 <p className="text-gray-700">+333 555 454</p>
-                <p className="text-gray-700">+001 503 777 505</p>
               </div>
               <div className="contact-details mt-4">
                 <h6 className="text-lg font-semibold text-gray-900">Email:</h6>
                 <p className="text-gray-700">teamsmartbyts@gmail.com</p>
-              </div>
-              <div className="contact-details mt-4">
-                <h6 className="text-lg font-semibold text-gray-900">
-                  Address:
-                </h6>
-                <p className="text-gray-700">
-                  Beechwood Avenue - NY 55311, New York
-                </p>
               </div>
             </div>
           </div>

@@ -119,9 +119,12 @@ const Footer = () => {
             <div className="footer-box-item">
               <div className="footer-content">
                 <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-                <ul className="footer-link">
+                <ul className="footer-link  -ml-7">
                   <li>
-                    <i className="fa fa-phone text-gray-300"></i>
+                    <FontAwesomeIcon
+                      icon={faPhone}
+                      className="text-lg md:-mt-0 -mt-4  text-white"
+                    />
                     <a
                       href="tel:503777505"
                       className="text-gray-300 ml-2 no-underline hover:text-white"
@@ -130,17 +133,16 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <i className="fa fa-envelope-o text-gray-300"></i>{" "}
+                    <FontAwesomeIcon
+                      icon={faEnvelope}
+                      className="text-lg  text-white"
+                    />
                     <a
                       href="mailto:teamsmartbyts@gmail.com"
-                      className="text-gray-300 ml-2 no-underline hover:text-white"
+                      className="text-gray-300  ml-2 no-underline hover:text-white"
                     >
                       teamsmartbyts@gmail.com
                     </a>
-                  </li>
-                  <li>
-                    <i className="fa fa-home no-underline text-gray-300"></i> CA
-                    560 Bush St &amp; 20th Ave, Canada.
                   </li>
                 </ul>
               </div>
