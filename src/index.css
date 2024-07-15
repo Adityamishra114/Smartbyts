@@ -148,3 +148,9 @@ body {
   color: #f0f0f0;
 }
 
+@media (max-width: 768px) {
+  .top-social {
+    margin-top: -42px;
+    justify-content: flex-end;
+  }
+}
