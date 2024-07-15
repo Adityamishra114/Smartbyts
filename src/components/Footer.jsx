@@ -116,7 +116,7 @@ const Footer = () => {
                 </ul>
               </div> */}
             </div>
-            <div className="footer-box-item">
+            <div className="footer-box-item -mt-20 sm:-mt-0">
               <div className="footer-content">
                 <h3 className="text-xl font-bold mb-4">Contact Us</h3>
                 <ul className="footer-link  -ml-7">

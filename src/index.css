@@ -13,21 +13,6 @@ body {
   min-height: 10vh;
 }
 
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-html {
-  scroll-behavior: smooth;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
 .smart {
   color: #05bbd5;
 }
@@ -162,15 +147,4 @@ body {
 .advertisers-service-sec .service-card:hover p {
   color: #f0f0f0;
 }
-/* ADVERTISERS SERVICE CARD ENDED */
 
-/* @media (max-width: 1050px) {
-  .topbar {
-    font-size: 15px;
-  }
-}
-@media (max-width: 768px) {
-  .topbar {
-    display: none;
-  }
-} */

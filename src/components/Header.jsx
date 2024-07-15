@@ -11,10 +11,10 @@ import NavigationBar from "./NavigationBar";
 
 const Header = () => {
   return (
-    <header className="header-navber-area ">
+    <header className="header-navber-area mb-40 ">
       <div className="nav-top-bar topbar text-black py-2 ">
         <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center pt-1  justify-between">
+          <div className="flex flex-wrap items-center pt-1  ">
             <div className="w-full md:w-1/2 flex flex-col md:flex-row justify-between  md:mb-0">
               <div className="call-to-action flex-wrap gap-2 items-center flex">
                 <p className="flex items-center contact">
