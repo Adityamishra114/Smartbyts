@@ -37,10 +37,10 @@ const Header = () => {
                   />
                   {/* <span className="text-lg ml-1 -mt-4 text-white">Phone:</span> */}
                   <a
-                    href="tel:+917004289924"
+                    href="tel:+91-8506850785"
                     className="text-lg contact no-underline md:-mt-0 -mt-4 text-white ml-1"
                   >
-                    +91-7004289924
+                    +91-8506850785
                   </a>
                 </p>
               </div>
